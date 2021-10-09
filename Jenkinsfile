@@ -9,6 +9,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'mvn -B -DskipTests clean package'
+        sh 'docker build -t springboot-hw .'
       }
     }
 
