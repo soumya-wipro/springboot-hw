@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sudo apt-get install -y docker'
+        sh 'apt-get install -y docker'
         sh 'mvn -B -DskipTests clean package'
         sh 'docker build -t springboot-hw .'
       }
