@@ -17,7 +17,7 @@ pipeline {
         sh '''docker.withRegistry(
 \'463405933313.dkr.ecr.ap-south-1.amazonaws.com\',
 \'ecr:463405933313.dkr.ecr.ap-south-1.amazonaws.com:jenkins_aws\') {
-    def myImage=docker.build(\'springboot-hw\'),
+    def myImage=docker.build(\'springboot-hw\')
     myImage.push(\'463405933313.dkr.ecr.ap-south-1.amazonaws.com/springboot-hw:latest\')
 }'''
         }
